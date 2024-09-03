@@ -18,3 +18,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/src/css/index.css
+/src/css/index.css.map
+/.idea/prettier.xml
+/.idea/vcs.xml
+/.idea/watcherTasks.xml

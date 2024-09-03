@@ -21,7 +21,9 @@ import GradientWrapper from "@site/src/pages/GradientWrapper";
 import SectionWrapper from "@site/src/pages/SectionWrapper";
 import Avatar from "boring-avatars";
 
-export const HomePage = () => {
+const ROOT_URL = "https://doc.jezzlab.com";
+
+const HomePage = () => {
   return (
     <div>
       <Navbar />
@@ -40,6 +42,7 @@ export const HomePage = () => {
     </div>
   );
 };
+export default HomePage;
 
 const ProductionDownload = () => {
   const handleDownload = async () => {
@@ -116,9 +119,8 @@ const ProductionDownload = () => {
 const navigation = [
   { name: "特性", href: "#features" },
   { name: "产品下载", href: "#production_download" },
-  { name: "文档", href: "http://localhost:3001/gc_docs/docs/start" },
-  { name: "资源", href: "http://localhost:3001/gc_docs/blog" },
-  { name: "FAQS", href: "http://localhost:3001/gc_docs/docs/faqs" },
+  { name: "文档", href: `${ROOT_URL}/docs/start` },
+  { name: "资源", href: `${ROOT_URL}/blog` },
 ];
 
 const Navbar = () => {
@@ -227,7 +229,7 @@ const Hero = () => {
           <div className="mt-6 flex gap-x-3 flex-row items-center text-sm">
             <button
               onClick={() => {
-                window.open("http://120.77.220.248/login");
+                window.open("https://jezzlab.com/login");
               }}
               className={
                 "px-5 py-3 bg-primary hover:bg-primary_darker text-white rounded-lg text-sm"
@@ -237,7 +239,7 @@ const Hero = () => {
             </button>
             <button
               onClick={() => {
-                window.open("http://localhost:3001/gc_docs/docs");
+                window.open("https://doc.jezzlab.com/docs");
               }}
               className={
                 "px-5 py-3 bg-gray-100 hover:bg-gray-200 text-primary rounded-lg text-sm"
