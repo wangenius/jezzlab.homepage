@@ -20,8 +20,7 @@ import { IoLogoChrome } from "react-icons/io";
 import GradientWrapper from "@site/src/pages/GradientWrapper";
 import SectionWrapper from "@site/src/pages/SectionWrapper";
 import Avatar from "boring-avatars";
-
-const ROOT_URL = "https://doc.jezzlab.com";
+import useDocusaurusContext from "@docusaurus/core/lib/client/exports/useDocusaurusContext";
 
 const HomePage = () => {
   return (
@@ -115,17 +114,26 @@ const ProductionDownload = () => {
     </div>
   );
 };
+const useNav = () => {
+  const { siteConfig } = useDocusaurusContext();
+  const apiUrl = siteConfig.customFields.apiUrl;
 
-const navigation = [
-  { name: "特性", href: "#features" },
-  { name: "产品下载", href: "#production_download" },
-  { name: "文档", href: `${ROOT_URL}/docs/start` },
-  { name: "资源", href: `${ROOT_URL}/blog` },
-];
+  const navigation = [
+    { name: "特性", href: "#features" },
+    { name: "产品下载", href: "#production_download" },
+    { name: "文档", href: `${apiUrl}/docs/start` },
+    { name: "资源", href: `${apiUrl}/blog` },
+  ];
+
+  return {
+    api: apiUrl,
+    nav: navigation,
+  };
+};
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const { nav } = useNav();
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -135,7 +143,7 @@ const Navbar = () => {
         <div className={"flex-1 flex gap-10 justify-between"}>
           <img src={"img/icon.svg"} className={"w-12"} alt={""} />
           <ul className="hidden items-center lg:flex lg:w-auto lg:space-x-6">
-            {navigation.map((item) => {
+            {nav.map((item) => {
               return (
                 <li>
                   <a
@@ -189,7 +197,7 @@ const Navbar = () => {
           </div>
           <div>
             <ul>
-              {navigation.map((item) => {
+              {nav.map((item) => {
                 return (
                   <li className="mb-1">
                     <a
@@ -214,6 +222,7 @@ const Navbar = () => {
   );
 };
 const Hero = () => {
+  const { api } = useNav();
   return (
     <div className=" font-styrene mx-auto flex w-full grow flex-col p-5 justify-center">
       <div className=" flex grow max-h-[80vh] flex-col  gap-4 h-full md:flex-row ">
@@ -229,7 +238,7 @@ const Hero = () => {
           <div className="mt-6 flex gap-x-3 flex-row items-center text-sm">
             <button
               onClick={() => {
-                window.open("https://jezzlab.com/login");
+                window.open("http://120.77.220.248/login");
               }}
               className={
                 "px-5 py-3 bg-primary hover:bg-primary_darker text-white rounded-lg text-sm"
@@ -239,7 +248,7 @@ const Hero = () => {
             </button>
             <button
               onClick={() => {
-                window.open("https://doc.jezzlab.com/docs");
+                window.open(`${api}/docs`);
               }}
               className={
                 "px-5 py-3 bg-gray-100 hover:bg-gray-200 text-primary rounded-lg text-sm"
@@ -689,48 +698,51 @@ const Testimonials = () => {
   );
 };
 
-const Footer = () => (
-  <footer className="pt-32 sm:pt-44 sm:px-0 lg:px-20">
-    <div className="custom-screen text-gray-600">
-      <div className="flex flex-wrap gap-y-10 items-center justify-between">
-        <div className="space-y-4">
-          <img src={"img/icon.svg"} alt={""} style={{ width: 60 }} />
-          <h2 className="text-gray-800 text-lg font-semibold sm:text-2xl">
-            基于AI的IP架构设计和创作工具
-          </h2>
-          <small>The Innovation Engine for IP Creation</small>
-          <p className="max-w-md">
-            我们帮助所有创作者实现他们脑海中创作的快速落地
-          </p>
-          <div className="pt-2 flex items-center gap-x-6 text-gray-400">
-            <SiTiktok className="w-6 h-6 hover:text-gray-500 duration-150" />
-            <SiBilibili className="w-6 h-6 hover:text-gray-500 duration-150" />
-            <SiTencentqq className="w-6 h-6 hover:text-gray-500 duration-150" />
-            <SiWechat className="w-6 h-6 hover:text-gray-500 duration-150" />
-            <SiSinaweibo className="w-6 h-6 hover:text-gray-500 duration-150" />
-            <SiXiaohongshu className="w-6 h-6 hover:text-gray-500 duration-150" />
+const Footer = () => {
+  const { nav } = useNav();
+  return (
+    <footer className="pt-32 sm:pt-44 sm:px-0 lg:px-20">
+      <div className="custom-screen text-gray-600">
+        <div className="flex flex-wrap gap-y-10 items-center justify-between">
+          <div className="space-y-4">
+            <img src={"img/icon.svg"} alt={""} style={{ width: 60 }} />
+            <h2 className="text-gray-800 text-lg font-semibold sm:text-2xl">
+              基于AI的IP架构设计和创作工具
+            </h2>
+            <small>The Innovation Engine for IP Creation</small>
+            <p className="max-w-md">
+              我们帮助所有创作者实现他们脑海中创作的快速落地
+            </p>
+            <div className="pt-2 flex items-center gap-x-6 text-gray-400">
+              <SiTiktok className="w-6 h-6 hover:text-gray-500 duration-150" />
+              <SiBilibili className="w-6 h-6 hover:text-gray-500 duration-150" />
+              <SiTencentqq className="w-6 h-6 hover:text-gray-500 duration-150" />
+              <SiWechat className="w-6 h-6 hover:text-gray-500 duration-150" />
+              <SiSinaweibo className="w-6 h-6 hover:text-gray-500 duration-150" />
+              <SiXiaohongshu className="w-6 h-6 hover:text-gray-500 duration-150" />
+            </div>
           </div>
+          <Newsletter />
         </div>
-        <Newsletter />
+        <div className="mt-10 py-10 border-t flex-row-reverse items-center justify-between sm:flex">
+          <ul className="flex flex-wrap items-center gap-4 sm:text-sm">
+            {nav.map((item, idx) => (
+              <li
+                key={idx}
+                className="font-medium text-gray-700 hover:text-gray-900 duration-150"
+              >
+                <a href={item.href}>{item.name}</a>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 sm:mt-0">
+            © 2024 创生语宙 Inc. All rights reserved.
+          </p>
+        </div>
       </div>
-      <div className="mt-10 py-10 border-t flex-row-reverse items-center justify-between sm:flex">
-        <ul className="flex flex-wrap items-center gap-4 sm:text-sm">
-          {navigation.map((item, idx) => (
-            <li
-              key={idx}
-              className="font-medium text-gray-700 hover:text-gray-900 duration-150"
-            >
-              <a href={item.href}>{item.name}</a>
-            </li>
-          ))}
-        </ul>
-        <p className="mt-6 sm:mt-0">
-          © 2024 创生语宙 Inc. All rights reserved.
-        </p>
-      </div>
-    </div>
-  </footer>
-);
+    </footer>
+  );
+};
 
 const Newsletter = () => {
   return (

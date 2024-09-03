@@ -14,6 +14,13 @@ const config: Config = {
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
   deploymentBranch: "gh-pages",
+  customFields: {
+    // 其他配置项
+    apiUrl:
+      process.env.NODE_ENV === "production"
+        ? "https://wangenius.com/gc_docs"
+        : "http://localhost:4000/gc_docs",
+  },
   presets: [
     [
       "classic",
