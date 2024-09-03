@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgc_docs=self.webpackChunkgc_docs||[]).push([[245],{9768:c=>{c.exports=JSON.parse('{"tags":[{"label":"collection","permalink":"/gc_docs/blog/tags/collection","count":1}]}')}}]);
