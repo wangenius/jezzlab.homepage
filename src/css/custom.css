@@ -57,3 +57,31 @@ h1 {
   font-size: 2rem;
   font-weight: 600;
 }
+.text-gradient {
+  background: linear-gradient(
+    270deg,
+    #4a90e2,
+    /* 蓝色 */ #7f8c8d,
+    /* 青色 */ #9b59b6,
+    /* 紫色 */ #4a90e2,
+    /* 蓝色 */ #2ecc71,
+    /* 绿色 */ #f39c12 /* 黄色 */
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 8s ease infinite;
+}
+
+/* 定义动画 */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
