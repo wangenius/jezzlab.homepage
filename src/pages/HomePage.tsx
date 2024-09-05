@@ -20,7 +20,7 @@ import { IoLogoChrome } from "react-icons/io";
 import GradientWrapper from "@site/src/pages/GradientWrapper";
 import SectionWrapper from "@site/src/pages/SectionWrapper";
 import Avatar from "boring-avatars";
-import { Text } from "./components"
+import  Text from "./components"
 import useDocusaurusContext from "@docusaurus/core/lib/client/exports/useDocusaurusContext";
 const HomePage = () => {
   return (
