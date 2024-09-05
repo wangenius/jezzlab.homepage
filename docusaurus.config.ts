@@ -3,7 +3,7 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "介子文档",
+  title: "芥子文档",
   tagline: "Jezz Docs",
   favicon: "img/icon.ico",
   url: "https://wangenius.github.io",
@@ -59,7 +59,7 @@ const config: Config = {
     ],
     image: "img/icon.svg",
     navbar: {
-      title: "介子文档",
+      title: "芥子文档",
       logo: {
         alt: "My Site Logo",
         src: "img/icon.svg",

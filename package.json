@@ -19,6 +19,7 @@
   "dependencies": {
     "@docusaurus/core": "3.5.2",
     "@docusaurus/preset-classic": "3.5.2",
+    "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.0",
     "autoprefixer": "^10.4.20",
     "boring-avatars": "^1.11.0",

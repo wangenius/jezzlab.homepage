@@ -179,3 +179,30 @@ p{
     -1px 1px 0 gray,
     1px 1px 0 gray;
 }
+/* styles.css */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+.typing-animation {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(40, end) infinite;
+  border-right: 2px solid gray; /* Optional: simulates a cursor */
+  box-sizing: border-box;
+}
+
+.typing-animation-container {
+  display: flex;
+  flex-direction: row;
+  text-align: left; /* Adjust based on your alignment needs */
+}
