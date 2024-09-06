@@ -57,20 +57,7 @@ h1 {
   font-size: 2rem;
   font-weight: 600;
 }
-.text-gradient {
-  background: linear-gradient(
-    270deg,
-    #4a90e2,
-    #9b59b6,
-    #0d6ad6,
-    #a52ecc,
-    #bd7501
-  );
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientAnimation 8s ease infinite;
-}
+
 
 /* 定义动画 */
 @keyframes gradientAnimation {
@@ -212,6 +199,20 @@ p {
   -webkit-text-fill-color: transparent;
   animation: gradientAnimation 8s ease infinite;
 }
+.text-gradient2 {
+  background: linear-gradient(
+    270deg,
+    #e27f4a,
+    #b69559,
+    #f8a92d,
+    #a5cc2e,
+    #bd7501
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 8s ease infinite;
+}
 
 /* 定义动画 */
 @keyframes gradientAnimation {
@@ -284,35 +285,9 @@ p {
   user-select: none;
   letter-spacing: 1px;
   line-height: 120px;
-  transition:
-          0.35s font-weight,
-          0.35s color;
 }
 
-.hoverText:hover {
-  text-shadow: 0 0 12px #cfcfcf;
-  transition: ease 300ms all;
-}
 
-/* To the right */
-.hoverText:hover + .hoverText {
-  /*font-weight: 500;*/
-  /*color: rgb(74, 74, 74);*/
-}
-
-.hoverText:hover + .hoverText + .hoverText {
-  /*font-weight: 500;*/
-}
-
-/* To the left */
-.hoverText:has(+ .hoverText:hover) {
-  /*font-weight: 500;*/
-  /*color: rgb(74, 74, 74);*/
-}
-
-.hoverText:has(+ .hoverText + .hoverText:hover) {
-  /*font-weight: 500;*/
-}
 .hoverBlack {
   font-weight: 500;
   user-select: none;
