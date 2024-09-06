@@ -3,11 +3,11 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "芥子文档",
+  title: "介子Jezz",
   tagline: "Jezz Docs",
   favicon: "img/icon.ico",
   url: "https://wangenius.github.io",
-  baseUrl: "/gc_docs/",
+  baseUrl: "/",
   organizationName: "wangenius",
   projectName: "gc_docs",
   onBrokenLinks: "throw",
@@ -18,8 +18,8 @@ const config: Config = {
     // 其他配置项
     apiUrl:
       process.env.NODE_ENV === "production"
-        ? "https://wangenius.com/gc_docs"
-        : "http://localhost:4000/gc_docs",
+        ? "https://www.jezzlab.com"
+        : "http://localhost:4000",
   },
   presets: [
     [

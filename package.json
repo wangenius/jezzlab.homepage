@@ -15,7 +15,7 @@
     "gh-pages-deploy": "docusaurus deploy",
     "typecheck": "tsc"
   },
-  "homepage": "https://wangenius.github.io/gc_docs/",
+  "homepage": "https://wangenius.github.io/",
   "dependencies": {
     "@docusaurus/core": "3.5.2",
     "@docusaurus/preset-classic": "3.5.2",
