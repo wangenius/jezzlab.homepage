@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgc_docs=self.webpackChunkgc_docs||[]).push([[31],{9636:(e,t,s)=>{s.r(t),s.d(t,{default:()=>l});var c=s(4848);const l=e=>{let{children:t}=e;return(0,c.jsx)("p",{className:"text-2xl sm:text-base text-center mt-6",children:t})}}}]);
