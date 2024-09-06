@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
   PiGhost,
   PiPuzzlePieceDuotone,
@@ -20,8 +20,15 @@ import { IoLogoChrome } from "react-icons/io";
 import GradientWrapper from "@site/src/pages/GradientWrapper";
 import SectionWrapper from "@site/src/pages/SectionWrapper";
 import Avatar from "boring-avatars";
-import  Text from "./components"
+import Text from "./components";
+import {
+  motion,
+  useMotionTemplate,
+  useMotionValue,
+  useSpring,
+} from "framer-motion";
 import useDocusaurusContext from "@docusaurus/core/lib/client/exports/useDocusaurusContext";
+
 const HomePage = () => {
   return (
     <div>
@@ -43,12 +50,68 @@ const HomePage = () => {
 };
 export default HomePage;
 
+const ROTATION_RANGE = 32.5;
+const HALF_ROTATION_RANGE = 32.5 / 2;
 
+const TiltCard = () => {
+  const ref = useRef(null);
+
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const xSpring = useSpring(x);
+  const ySpring = useSpring(y);
+
+  const transform = useMotionTemplate`rotateX(${xSpring}deg) rotateY(${ySpring}deg)`;
+
+  const handleMouseMove = (e) => {
+    if (!ref.current) return [0, 0];
+
+    const rect = ref.current.getBoundingClientRect();
+
+    const width = rect.width;
+    const height = rect.height;
+
+    const mouseX = (e.clientX - rect.left) * ROTATION_RANGE;
+    const mouseY = (e.clientY - rect.top) * ROTATION_RANGE;
+
+    const rX = (mouseY / height - HALF_ROTATION_RANGE) * -1;
+    const rY = mouseX / width - HALF_ROTATION_RANGE;
+
+    x.set(rX);
+    y.set(rY);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        transformStyle: "preserve-3d",
+        transform,
+      }}
+      className="relative rounded-xl"
+    >
+      <img
+        src={"img/homepage copy.png"}
+        alt="a home page"
+        loading="eager"
+        className="lg:hero-image  w-full  rounded-lg shadow-xl ring-2 ring-zinc-800/5 transform-gpu "
+      />
+    </motion.div>
+  );
+};
 const ProductionDownload = () => {
   const handleDownload = async () => {
     try {
       // 发起请求获取文件
-      const response = await fetch("/Jezz_0.1.0_x64-setup.exe"); // 文件在 public 目录中的相对路径
+      const response = await fetch("/file/Jezz.exe"); // 文件在 public 目录中的相对路径
       const blob = await response.blob();
       const url = URL.createObjectURL(blob);
 
@@ -83,7 +146,12 @@ const ProductionDownload = () => {
           </p>
 
           <div className="flex justify-center my-10">
-            <div className="flex items-center border w-auto rounded-lg px-4 py-2  mx-2">
+            <div
+              onClick={() => {
+                window.open("http://120.77.220.248");
+              }}
+              className="cursor-pointer flex items-center border w-auto rounded-lg px-4 py-2  mx-2"
+            >
               <IoLogoChrome size={25} />
               <div className="text-left ml-3">
                 <p className="text-xs text-gray-200">推荐chrome</p>
@@ -92,16 +160,16 @@ const ProductionDownload = () => {
             </div>
             <div
               onClick={handleDownload}
-              className="flex items-center border w-auto rounded-lg px-4 py-2 mx-2"
+              className="cursor-pointer flex items-center border w-auto rounded-lg px-4 py-2 mx-2"
             >
               <BiLogoWindows size={25} />
               <div className="text-left ml-3">
-                <p className="text-xs text-gray-200">下载PC端应用</p>
-                <p className="text-sm md:text-base">WINDOWS 10/11</p>
+                <p className="text-xs text-gray-200">下载PC端应用(preview)</p>
+                <p className="text-sm md:text-base">WINDOWS 10/11(x64)</p>
               </div>
             </div>
 
-            <div className="flex items-center border rounded-lg px-4 py-2 w-44 mx-2">
+            <div className="cursor-pointer flex items-center border rounded-lg px-4 py-2 w-44 mx-2">
               <SiMacos size={25} />
               <div className="text-left ml-3">
                 <p className="text-xs text-gray-200">正在开发....</p>
@@ -222,40 +290,79 @@ const Navbar = () => {
     </div>
   );
 };
+const BubbleText = () => {
+  return (
+    <h2 className="text-center text-8xl font-thin text-gray-800">
+      <div>
+        {"重新定义写作".split("").map((child, idx) => (
+          <span className={"hoverText"} key={idx}>
+            {child}
+          </span>
+        ))}
+      </div>
+      <div>
+        {"创造你的世界".split("").map((child, idx) => (
+          <span className={"hoverText"} key={idx}>
+            {child}
+          </span>
+        ))}
+      </div>
+    </h2>
+  );
+};
+const BubbleText2 = () => {
+  return (
+    <div className="flex flex-wrap md:flex-nowrap flex-row sm:text-6xl lg:text-6xl xl:writing-mode-vertical-rl xl:-mr-32 text-center text-8xl font-thin text-gray-400">
+      <div className={"flex flex-row md:flex-col"}>
+        {"身如芥子，".split("").map((child, idx) => (
+          <span className={"hoverBlack"} key={idx}>
+            {child}
+          </span>
+        ))}
+      </div>
+      <div className={"flex  flex-row md:flex-col"}>
+        {"心藏须弥".split("").map((child, idx) => (
+          <span className={"hoverBlack"} key={idx}>
+            {child}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const Hero = () => {
   const { api } = useNav();
   return (
     <div className="  mx-auto px-4 md:px-10 flex w-full grow flex-col lg:px-32 ">
       <div className=" flex flex-col gap-10 h-full  justify-center items-center ">
-        <div className="flex px-6 flex-col pt-24 md:px-24 lg:px-0 lg:w-[75%] justify-center items-start  w-full ">
-          <h1 className="text-gray-900 text-4xl sm:text-5xl  font-bold  lg:text-5xl   ">
-            重新定义<span className="text-gradient">写作</span>
-            <br />
-            创造你的<span className="text-gradient">世界</span>
-          </h1>
-          <Text>
-            芥子集成先进的<strong>AI技术</strong>为每一个人，每一个团队，提供优秀的内容创作平台、打开创作的思路，构建充满想象的世界，让创作变得<strong>轻而易举</strong>
-          </Text>
+        <div className="flex px-6 flex-col pt-24 md:px-24 lg:px-0 lg:w-[75%] justify-center items-center  w-full ">
+          <BubbleText />
+          <div className={"my-2 text-2xl text-center text-gray-600"}>
+            芥子集成先进的<strong>AI技术</strong>
+            为每一个人，每一个团队，提供优秀的内容创作平台、打开创作的思路，构建充满想象的世界，让创作变得
+            <strong>轻而易举</strong>
+          </div>
           <div className="mt-6 flex gap-x-3 flex-row items-center text-sm">
             <button
               onClick={() => {
                 window.open("http://120.77.220.248/login");
               }}
               className={
-                "px-5 py-3 bg-primary font-semibold hover:bg-primary_darker text-white rounded-lg text-"
+                "px-5 py-3 bg-primary font-semibold hover:bg-primary-darker-1 hover:shadow text-white rounded-lg text-2xl"
               }
             >
               开始创作
             </button>
             <button
               onClick={() => {
-                window.open(`${api}/docs`);
+                window.open(`${api}/docs/start`);
               }}
               className={
-                "px-5 py-3 bg-gray-100 font-semibold hover:bg-gray-200 text-primary rounded-lg text-sm "
+                "px-5 py-3  hover:bg-gray-100 text-primary rounded-lg text-2xl"
               }
             >
-              学习更多
+              探索更多
             </button>
           </div>
         </div>
@@ -264,32 +371,13 @@ const Hero = () => {
             className="rounded-xl  flex items-center overflow-hidden justify-center lg:bg-transparent"
             style={{ backgroundColor: "#F0EEE5" }}
           >
-            <div className="flex flex-col-reverse pl-6  py-10 gap-4   -mr-16  sm:gap-6 md:px-20 md:-mr-0 lg:px-0 xl:flex-row lg:w-[75%] xl:gap-6">
-              <div className="">
-                <img
-                  src={"img/homepage copy.png"}
-                  alt="a home page"
-                  loading="eager"
-                  className="lg:hero-image  w-full  rounded-lg shadow-xl ring-2 ring-zinc-800/5 transform-gpu "
-                />
-              </div >
-              <div className="flex flex-row text-4xl sm:text-6xl   lg:text-6xl  xl:writing-mode-vertical-rl xl:-mr-32">
-
-                <p className="font-black text-gray-400 opacity-15">
-                  身如芥子,
-                </p>
-                <p className="font-black text-gray-400 opacity-15">
-                  心藏须弥
-                </p>
-              </div>
-
+            <div className="flex flex-col-reverse pl-6  py-10 gap-4 -mr-16  sm:gap-6 md:px-20 md:-mr-0 lg:px-0 xl:flex-row lg:w-[75%] xl:gap-6">
+              <TiltCard />
+              <BubbleText2 />
             </div>
           </div>
         </div>
       </div>
-
-
-
     </div>
   );
 };
@@ -341,19 +429,16 @@ const Features = () => {
 
   return (
     <SectionWrapper className="lg:px-32">
-     <div
-    id="features"
-    className=""
-   
-  >
+      <div id="features" className="">
         <div className="flex flex-col max-w-2xl mx-auto space-y-3 items-center text-center mb-10 ">
-          <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl pb-3">
-            <span className="text-gradient">芥子空间</span>
+          <h2 className="text-gray-800 sm:text-5xl font-semibold text-4xl pb-3">
+            芥子空间
           </h2>
 
-          <Text> 
-            <strong>芥子空间</strong>是记录你所创造的世界观的地方，AI会始终遵循你所创建的规则。
-          </Text>
+          <div className="text-gray-600 text-lg">
+            <strong>芥子空间</strong>
+            是记录你所创造的世界观的地方，AI会始终遵循你所创建的规则。
+          </div>
         </div>
         <div className="flex flex-col lg:flex-row p-3 items-center">
           <div className="lg:basis-1/3">
@@ -373,7 +458,7 @@ const Features = () => {
                     {item.title}
                   </div>
                 </div>
-                <Text> {item.desc}</Text> 
+                <Text> {item.desc}</Text>
               </li>
             ))}
           </ul>
@@ -407,51 +492,49 @@ const CTA = () => {
   return (
     <SectionWrapper
       id="cta"
-      className="pb-0  "
+      className="pb-0"
       style={{ backgroundColor: "#F5F4EE" }}
     >
       <div className="flex flex-col justify-center items-center h-full px-10 lg:px-0">
         <div className="pb-16 max-w-2xl px-16 flex flex-col justify-center items-center mx-auto space-y-3 sm:text-center ">
-          <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl ">
-            用<span className="text-gradient">芥子</span>，让你的创意成为现实
+          <h2 className="text-gray-800 sm:text-5xl font-semibold text-4xl pb-3">
+            <span className="text-gradient">芥子</span>：从创意到现实
           </h2>
 
-          <Text> 
+          <div className={"text-gray-600 text-lg"}>
             <strong>芥子</strong>
             用前沿的AI技术，为你预先解决了基础的文本生成需求，你可以迅速构建作品的独特
             <strong>宏大世界观</strong>
             ，芥子帮你将创意转化为现实，使作品从核心创意到具体文本的过程如搭积木般简单明了。
-          </Text> 
+          </div>
         </div>
         <div className="custom-screen  max-w-4xl pb-16 lx:pb-0 xl:max-w-[75%] mx-auto  text-gray-300 ">
-          
-            <ul className="space-y-8 gap-x-6 px-0 sm:px-24 md:px-0 lg:px-12 md:flex md:space-y-0  ">
-              {features.map((item, idx) => (
-                <li
-                  key={idx}
-                  className="flex-1 flex flex-col overflow-hidden justify-between rounded-xl aspect-[3/4] md:aspect-[2/3] h-auto   "
-                  style={{ backgroundColor: "#F0EEE5" }}
-                >
-                  <div className="p-6 ">
-                    <h2 className=" text-gray-900 mb-4 text-base font-bold ">
-                      {item.title}
-                    </h2>
-                    <p className="text-gray-900 text-sm sm:text-base  max-w-xl mt-6 ">
-                      {item.desc}
-                    </p>
-                  </div>
-                  <div className="pl-6 relative overflow-hidden -mr-6 ">
-                    <img
-                      src={item.img}
-                      alt={item.name}
-                      className="w-full h-full object-cover shadow-2xl "
-                      style={{ objectPosition: "top left" }}
-                    />
-                  </div>
-                </li>
-              ))}
-            </ul>
-          
+          <ul className="space-y-8 gap-x-6 px-0 sm:px-24 md:px-0 lg:px-12 md:flex md:space-y-0  ">
+            {features.map((item, idx) => (
+              <li
+                key={idx}
+                className="flex-1 flex flex-col overflow-hidden hover:shadow-lg transition-all justify-between rounded-xl aspect-[3/4] md:aspect-[2/3] h-auto   "
+                style={{ backgroundColor: "#F0EEE5" }}
+              >
+                <div className="p-6 ">
+                  <h2 className=" text-gray-900 mb-4 text-[1.2rem] font-bold ">
+                    {item.title}
+                  </h2>
+                  <p className="text-gray-900 text-sm sm:text-base  max-w-xl mt-6 ">
+                    {item.desc}
+                  </p>
+                </div>
+                <div className="pl-6 relative overflow-hidden -mr-6 ">
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className="w-full h-full object-cover shadow-2xl "
+                    style={{ objectPosition: "top left" }}
+                  />
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </SectionWrapper>
@@ -463,7 +546,7 @@ const ToolKit = () => {
     {
       title: (
         <h2>
-          <span className="text-gradient">Ai构思</span>情节
+          <span className="text-gradient">AI</span>构思情节
         </h2>
       ),
 
@@ -483,14 +566,13 @@ const ToolKit = () => {
               alt="AI构思情节"
             />
           </div>
-       
         </div>
       ),
     },
     {
       title: (
         <h2>
-          <span className="text-gradient">AI生成</span>章节
+          <span className="text-gradient">AI</span>生成章节
         </h2>
       ),
       desc: (
@@ -510,14 +592,13 @@ const ToolKit = () => {
               alt="AI生成章节"
             />
           </div>
-      
         </div>
       ),
     },
     {
       title: (
         <h2>
-          <span className="text-gradient">AI续写</span>正文
+          <span className="text-gradient">AI</span>续写正文
         </h2>
       ),
       desc: (
@@ -541,7 +622,7 @@ const ToolKit = () => {
     {
       title: (
         <h2>
-          <span className="text-gradient">AI创建</span>对象
+          <span className="text-gradient">AI</span>创建对象
         </h2>
       ),
       desc: (
@@ -571,11 +652,11 @@ const ToolKit = () => {
         className="pb-0 space-y-5 max-w-4xl mx-auto px-10 lg:px-0"
       >
         <div className="max-w-2xl mx-auto space-y-3 sm:text-center mt-10 ">
-          <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+          <h2 className="text-gray-800 sm:text-5xl font-semibold text-4xl pb-3">
             随时<span className="text-gradient">迸发</span>，无畏瓶颈
           </h2>
 
-          <p>
+          <p className={"text-gray-600 text-lg"}>
             芥子的AI可以介入创作中的任何一个环节，无论是人物设定、情节构思、章节生成、章节大纲生成、风格化续写，芥子可以为你任何阶段的灵感提供AI协助。
           </p>
         </div>
@@ -672,7 +753,7 @@ const Testimonials = () => {
 const Footer = () => {
   const { nav } = useNav();
   return (
-    <footer className="pt-32 sm:pt-44 sm:px-0 lg:px-20">
+    <footer className="pt-32 p-5 sm:pt-44 sm:px-0 lg:px-20">
       <div className="custom-screen text-gray-600">
         <div className="flex flex-wrap gap-y-10 items-center justify-between">
           <div className="space-y-4">
@@ -702,7 +783,9 @@ const Footer = () => {
                 key={idx}
                 className="font-medium text-gray-700 hover:text-gray-900 duration-150"
               >
-                <a href={item.href}>{item.name}</a>
+                <a className={"hover:text-primary"} href={item.href}>
+                  {item.name}
+                </a>
               </li>
             ))}
           </ul>

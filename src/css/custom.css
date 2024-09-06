@@ -11,13 +11,13 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #07f;
-  --ifm-color-primary-dark: #026fec;
-  --ifm-color-primary-darker: #0263d1;
-  --ifm-color-primary-darkest: #0159bd;
-  --ifm-color-primary-light: #0f7cfa;
-  --ifm-color-primary-lighter: #1d81f4;
-  --ifm-color-primary-lightest: #3e99ff;
+  --ifm-color-primary: #cc785c;
+  --ifm-color-primary-dark: #c57054;
+  --ifm-color-primary-darker: #c36f53;
+  --ifm-color-primary-darkest: #b8674d;
+  --ifm-color-primary-light: #d68266;
+  --ifm-color-primary-lighter: #e38e72;
+  --ifm-color-primary-lightest: #f19c80;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
@@ -136,7 +136,6 @@ h1 {
 
 ::-webkit-scrollbar {
   width: 10px;
-  display: none;
 }
 
 ::-webkit-scrollbar-track {
@@ -203,11 +202,10 @@ p {
   background: linear-gradient(
     270deg,
     #4a90e2,
-    /* 蓝色 */ #7f8c8d,
-    /* 青色 */ #9b59b6,
-    /* 紫色 */ #4a90e2,
-    /* 蓝色 */ #2ecc71,
-    /* 绿色 */ #f39c12 /* 黄色 */
+    #9b59b6,
+    #0d6ad6,
+    #a52ecc,
+    #bd7501
   );
   background-size: 300% 300%;
   -webkit-background-clip: text;
@@ -279,4 +277,71 @@ p {
   box-sizing: border-box;
   /* Optionally, you can limit the width to the width of 4 characters */
   max-width: 4ch; /* Ensure width does not exceed the space of 4 characters */
+}
+
+.hoverText {
+  font-weight: 800;
+  user-select: none;
+  letter-spacing: 1px;
+  line-height: 120px;
+  transition:
+          0.35s font-weight,
+          0.35s color;
+}
+
+.hoverText:hover {
+  text-shadow: 0 0 12px #cfcfcf;
+  transition: ease 300ms all;
+}
+
+/* To the right */
+.hoverText:hover + .hoverText {
+  /*font-weight: 500;*/
+  /*color: rgb(74, 74, 74);*/
+}
+
+.hoverText:hover + .hoverText + .hoverText {
+  /*font-weight: 500;*/
+}
+
+/* To the left */
+.hoverText:has(+ .hoverText:hover) {
+  /*font-weight: 500;*/
+  /*color: rgb(74, 74, 74);*/
+}
+
+.hoverText:has(+ .hoverText + .hoverText:hover) {
+  /*font-weight: 500;*/
+}
+.hoverBlack {
+  font-weight: 500;
+  user-select: none;
+  transition:
+          0.35s font-weight,
+          0.35s color;
+}
+
+.hoverBlack:hover {
+  color: #0e0f21;
+
+}
+
+/* To the right */
+.hoverBlack:hover + .hoverBlack {
+  /*font-weight: 500;*/
+  /*color: rgb(74, 74, 74);*/
+}
+
+.hoverBlack:hover + .hoverBlack + .hoverBlack {
+  /*font-weight: 500;*/
+}
+
+/* To the left */
+.hoverText:has(+ .hoverText:hover) {
+  /*font-weight: 500;*/
+  /*color: rgb(74, 74, 74);*/
+}
+
+.hoverText:has(+ .hoverText + .hoverText:hover) {
+  /*font-weight: 500;*/
 }

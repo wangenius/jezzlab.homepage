@@ -110,10 +110,10 @@ const config: Config = {
 
     palette: {
       primary: {
-        main: "#07f", // 主色调
+        main: "#cc785c", // 主色调
       },
       secondary: {
-        main: "#ff4081", // 次色调
+        main: "#0e0e0e", // 次色调
       },
     },
   } satisfies Preset.ThemeConfig,
