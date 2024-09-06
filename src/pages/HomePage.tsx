@@ -20,8 +20,8 @@ import { IoLogoChrome } from "react-icons/io";
 import GradientWrapper from "@site/src/pages/GradientWrapper";
 import SectionWrapper from "@site/src/pages/SectionWrapper";
 import Avatar from "boring-avatars";
+import  Text from "./components"
 import useDocusaurusContext from "@docusaurus/core/lib/client/exports/useDocusaurusContext";
-
 const HomePage = () => {
   return (
     <div>
@@ -43,11 +43,12 @@ const HomePage = () => {
 };
 export default HomePage;
 
+
 const ProductionDownload = () => {
   const handleDownload = async () => {
     try {
       // 发起请求获取文件
-      const response = await fetch("/Jezz.exe"); // 文件在 public 目录中的相对路径
+      const response = await fetch("/Jezz_0.1.0_x64-setup.exe"); // 文件在 public 目录中的相对路径
       const blob = await response.blob();
       const url = URL.createObjectURL(blob);
 
@@ -75,7 +76,7 @@ const ProductionDownload = () => {
             <div className="max-w-2xl mx-auto text-center"></div>
           </div>
           <h2 className="text-gray-100 text-3xl font-semibold sm:text-4xl">
-            和介子一起开始今天的工作
+            和芥子一起开始今天的工作
           </h2>
           <p className="mt-3 text-gray-100">
             一个专家为您的下一个想法创建，遵循最佳实践，删除障碍，按时交付。
@@ -139,7 +140,7 @@ const Navbar = () => {
   };
   return (
     <div className={"lg:px-20 mt-2"}>
-      <nav className="relative px-4 py-4 flex justify-between items-center bg-white">
+      <nav className="relative px-10  py-4 lg:px-4 flex justify-between items-center bg-white">
         <div className={"flex-1 flex gap-10 justify-between"}>
           <img src={"img/icon.svg"} className={"w-12"} alt={""} />
           <ul className="hidden items-center lg:flex lg:w-auto lg:space-x-6">
@@ -147,7 +148,7 @@ const Navbar = () => {
               return (
                 <li>
                   <a
-                    className="text-sm text-gray-600 hover:text-gray-800"
+                    className="text-sm hover:no-underline text-gray-600 hover:text-primary"
                     href={item.href}
                   >
                     {item.name}
@@ -224,24 +225,24 @@ const Navbar = () => {
 const Hero = () => {
   const { api } = useNav();
   return (
-    <div className=" font-styrene mx-auto flex w-full grow flex-col p-5 justify-center">
-      <div className=" flex grow max-h-[80vh] flex-col  gap-4 h-full md:flex-row ">
-        <div className="flex basis-2/5 flex-col lg:px-16 md:px-0 md:pl-16 justify-center items-start pt-2 w-full [@media(min-height:900px)]:pt-10">
-          <h1 className="text-gray-900 text-4xl font-semibold  lg:text-5xl ">
-            重新定义<span className="text-gradient">写作</span>，
+    <div className="  mx-auto px-4 md:px-10 flex w-full grow flex-col lg:px-32 ">
+      <div className=" flex flex-col gap-10 h-full  justify-center items-center ">
+        <div className="flex px-6 flex-col pt-24 md:px-24 lg:px-0 lg:w-[75%] justify-center items-start  w-full ">
+          <h1 className="text-gray-900 text-4xl sm:text-5xl  font-bold  lg:text-5xl   ">
+            重新定义<span className="text-gradient">写作</span>
             <br />
-            创造你的<span className="text-gradient">世界</span>，
+            创造你的<span className="text-gradient">世界</span>
           </h1>
-          <p className="items-star max-w-xl text-gray-600 text-sm mt-6">
-            介子集成先进的AI技术为每一个人，每一个团队，提供优秀的内容创作平台、打开创作的思路，构建充满想象的世界，让创作变得轻而易举
-          </p>
+          <Text>
+            芥子集成先进的<strong>AI技术</strong>为每一个人，每一个团队，提供优秀的内容创作平台、打开创作的思路，构建充满想象的世界，让创作变得<strong>轻而易举</strong>
+          </Text>
           <div className="mt-6 flex gap-x-3 flex-row items-center text-sm">
             <button
               onClick={() => {
                 window.open("http://120.77.220.248/login");
               }}
               className={
-                "px-5 py-3 bg-primary hover:bg-primary_darker text-white rounded-lg text-sm"
+                "px-5 py-3 bg-primary font-semibold hover:bg-primary_darker text-white rounded-lg text-"
               }
             >
               开始创作
@@ -251,34 +252,44 @@ const Hero = () => {
                 window.open(`${api}/docs`);
               }}
               className={
-                "px-5 py-3 bg-gray-100 hover:bg-gray-200 text-primary rounded-lg text-sm"
+                "px-5 py-3 bg-gray-100 font-semibold hover:bg-gray-200 text-primary rounded-lg text-sm "
               }
             >
               学习更多
             </button>
           </div>
         </div>
-        <div className="md:flex min-h-[80vh] basis-3/5 justify-center">
+        <div className="  justify-center">
           <div
-            className="md:rounded-xl  flex items-center overflow-hidden "
+            className="rounded-xl  flex items-center overflow-hidden justify-center lg:bg-transparent"
             style={{ backgroundColor: "#F0EEE5" }}
           >
-            <div className="ml-20 -mr-6">
+            <div className="flex flex-col-reverse pl-6  py-10 gap-4   -mr-16  sm:gap-6 md:px-20 md:-mr-0 lg:px-0 xl:flex-row lg:w-[75%] xl:gap-6">
               <div className="">
                 <img
-                  src={"img/homepage.png"}
+                  src={"img/homepage copy.png"}
                   alt="a home page"
                   loading="eager"
-                  className="lg:hero-image w-[40rem] md:w-full max-w-4xl rounded-lg shadow-xl ring-2 ring-zinc-800/5 transform-gpu xl:-ml-4"
+                  className="lg:hero-image  w-full  rounded-lg shadow-xl ring-2 ring-zinc-800/5 transform-gpu "
                 />
+              </div >
+              <div className="flex flex-row text-4xl sm:text-6xl   lg:text-6xl  xl:writing-mode-vertical-rl xl:-mr-32">
+
+                <p className="font-black text-gray-400 opacity-15">
+                  身如芥子,
+                </p>
+                <p className="font-black text-gray-400 opacity-15">
+                  心藏须弥
+                </p>
               </div>
-              <p className="text-6xl font-black text-gray-400 opacity-25">
-                身如芥子，心藏须弥
-              </p>
+
             </div>
           </div>
         </div>
       </div>
+
+
+
     </div>
   );
 };
@@ -291,8 +302,8 @@ const Features = () => {
 
       desc: (
         <span>
-          你的每一个情节片段 随时记录你的<strong>灵光一现</strong>
-          ，每当你需要，AI可以帮你编写进你的故事，让写作像搭建积木一般
+          你故事中的情节片段，随时记录你的<strong>灵光一现</strong>
+          ，每当你需要，AI可以帮你编写进故事，让写作像搭建积木一般。
         </span>
       ),
     },
@@ -301,8 +312,8 @@ const Features = () => {
       title: "对象",
       desc: (
         <span>
-          所有与你故事相关的内容，包括<strong>角色、地点、传说或物品</strong>
-          等信息，AI会根据你的需要需要知道什么，它就会在这里查找。
+          所有与你故事相关的内容，包括<strong>角色、地点、或物品</strong>
+          等内容，AI将基于对象内容为你写作。
         </span>
       ),
     },
@@ -312,7 +323,7 @@ const Features = () => {
       desc: (
         <span>
           用来丰富你的<strong>世界观设定</strong>
-          ，无论是能力、性格、技能、称号、职业，规则、任你设置{" "}
+          ，无论是能力、性格、技能、称号、职业，规则、任你设置。
         </span>
       ),
     },
@@ -321,47 +332,48 @@ const Features = () => {
       title: "插件",
       desc: (
         <span>
-          更多有趣的功能，聊天机器人、地图工具、角色关系、创意工坊，让创作玩出
-          <strong>新花样</strong>
+          更多有趣的功能，节点式编排，聊天机器人、地图工具、角色关系、创意工坊，让创作玩出
+          <strong>新花样</strong>。
         </span>
       ),
     },
   ];
 
   return (
-    <SectionWrapper>
-      <div id={"features"}>
-        <div className="max-w-2xl mx-auto space-y-3 sm:text-center px-20 pt-16">
-          <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl ">
-            用<span className="text-gradient">介子</span>，让你的创意成为现实
+    <SectionWrapper className="lg:px-32">
+     <div
+    id="features"
+    className=""
+   
+  >
+        <div className="flex flex-col max-w-2xl mx-auto space-y-3 items-center text-center mb-10 ">
+          <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl pb-3">
+            <span className="text-gradient">芥子空间</span>
           </h2>
 
-          <p className=" mt-6 pb-16 ">
-            <strong>介子</strong>
-            用前沿的AI技术，为你预先解决了基础的文本生成需求，你可以迅速构建作品的独特
-            <strong>宏大世界观</strong>
-            ，介子帮你将创意转化为现实，使作品从核心创意到具体文本的过程如搭积木般简单明了。
-          </p>
+          <Text> 
+            <strong>芥子空间</strong>是记录你所创造的世界观的地方，AI会始终遵循你所创建的规则。
+          </Text>
         </div>
-        <div className="flex flex-col lg:flex-row p-3 lg:p-20 gap-x-20">
-          <div className={"flex-1"}>
+        <div className="flex flex-col lg:flex-row p-3 items-center">
+          <div className="lg:basis-1/3">
             <img
-              src={"img/codex2.jpg"} // 替换成你图片的路径
+              src={"img/magic.png"} // 替换成你图片的路径
               alt="描述图片的内容" // 添加图片的替代文本
               className="col-span-1 w-80 mx-auto rounded-xl"
             />
           </div>
 
-          <ul className="flex-1 grid items-center gap-x-12 mt-5 lg:mt-0 gap-y-8 grid-cols-2 p-2 lg:p-10">
+          <ul className="lg:basis-2/3 grid grid-cols-1 px-20 gap-y-10 py-10  sm:grid-cols-2 lg:px-16   items-start gap-x-12 mt-5 ">
             {features.map((item, idx) => (
-              <li key={idx} className="space-y-3">
-                <div className="ext-l sm:text-l bg-zinc-900 rounded-2xl px-4 md:px-8 py-2 md:py-3 inline-flex items-center justify-center text-zinc-50 font-semibold  tracking-wide transition hover:-translate-y-2 ease-out hover:shadow-xl">
-                  <div className={"flex gap-2 items-center"}>
+              <li key={idx} className="flex flex-col space-y-4  items-start">
+                <div className="sm:text-l  bg-zinc-900 rounded-2xl px-4 md:px-8 py-2 md:py-3 inline-flex items-center justify-center text-zinc-50 font-semibold  tracking-wide transition hover:-translate-y-2 ease-out hover:shadow-xl">
+                  <div className="flex gap-3 items-center">
                     {item.icon}
                     {item.title}
                   </div>
                 </div>
-                <p>{item.desc}</p>
+                <Text> {item.desc}</Text> 
               </li>
             ))}
           </ul>
@@ -399,47 +411,47 @@ const CTA = () => {
       style={{ backgroundColor: "#F5F4EE" }}
     >
       <div className="flex flex-col justify-center items-center h-full px-10 lg:px-0">
-        <div className="py-10 max-w-2xl flex flex-col justify-center items-center mx-auto space-y-3 sm:text-center ">
+        <div className="pb-16 max-w-2xl px-16 flex flex-col justify-center items-center mx-auto space-y-3 sm:text-center ">
           <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl ">
-            用<span className="text-gradient">介子</span>，让你的创意成为现实
+            用<span className="text-gradient">芥子</span>，让你的创意成为现实
           </h2>
 
-          <p className=" mt-6  ">
-            <strong>介子</strong>
+          <Text> 
+            <strong>芥子</strong>
             用前沿的AI技术，为你预先解决了基础的文本生成需求，你可以迅速构建作品的独特
             <strong>宏大世界观</strong>
-            ，介子帮你将创意转化为现实，使作品从核心创意到具体文本的过程如搭积木般简单明了。
-          </p>
+            ，芥子帮你将创意转化为现实，使作品从核心创意到具体文本的过程如搭积木般简单明了。
+          </Text> 
         </div>
-        <div className="custom-screen  max-w-4xl mx-auto  text-gray-300">
-          <div className="mt-12">
-            <ul className="space-y-8 gap-x-6 sm:flex sm:space-y-0">
+        <div className="custom-screen  max-w-4xl pb-16 lx:pb-0 xl:max-w-[75%] mx-auto  text-gray-300 ">
+          
+            <ul className="space-y-8 gap-x-6 px-0 sm:px-24 md:px-0 lg:px-12 md:flex md:space-y-0  ">
               {features.map((item, idx) => (
                 <li
                   key={idx}
-                  className="flex-1 flex flex-col  overflow-hidden justify-between rounded-xl h-[400px] "
+                  className="flex-1 flex flex-col overflow-hidden justify-between rounded-xl aspect-[3/4] md:aspect-[2/3] h-auto   "
                   style={{ backgroundColor: "#F0EEE5" }}
                 >
                   <div className="p-6 ">
-                    <h2 className=" text-gray-900 mb-4 ext-l font-bold sm:text-l">
+                    <h2 className=" text-gray-900 mb-4 text-base font-bold ">
                       {item.title}
                     </h2>
-                    <p className="text-gray-900  text-l font-light ">
+                    <p className="text-gray-900 text-sm sm:text-base  max-w-xl mt-6 ">
                       {item.desc}
                     </p>
                   </div>
-                  <div className="pl-6 relative overflow-hidden ">
+                  <div className="pl-6 relative overflow-hidden -mr-6 ">
                     <img
                       src={item.img}
                       alt={item.name}
-                      className="w-full h-full object-cover shadow-2xl"
+                      className="w-full h-full object-cover shadow-2xl "
                       style={{ objectPosition: "top left" }}
                     />
                   </div>
                 </li>
               ))}
             </ul>
-          </div>
+          
         </div>
       </div>
     </SectionWrapper>
@@ -451,100 +463,75 @@ const ToolKit = () => {
     {
       title: (
         <h2>
-          情节<span className="text-gradient">构思</span>
+          <span className="text-gradient">Ai构思</span>情节
         </h2>
       ),
 
       desc: (
-        <p className="text-gray-600 text-l">
-          在介子中，你可以随时用AI创建情节，AI将会基于你创建的世界观为你提供灵感
+        <p className="text-gray-900 text-l">
+          在芥子中，你可以随时用AI创建情节，AI将会基于你创建的世界观为你提供灵感
         </p>
       ),
       img: (
-        <div className=" relative z-20">
+        <div className=" p-2 ">
           <div className=" object-none ">
             <img
-              className=" w-3/5 mt-6  mr-6 ml-auto  rounded-lg shadow-xl ring-2 ring-zinc-800/5 "
+              className="  "
               loading="lazy"
               decoding="async"
               src={"img/create_scene.png"}
-              alt="章节化"
+              alt="AI构思情节"
             />
           </div>
-          <div className="-mt-24 ">
-            <img
-              className=" w-1/3 mb-6 ml-6 rounded-lg shadow-xl ring-2 ring-zinc-800/5"
-              loading="lazy"
-              decoding="async"
-              src={"img/ai_story.png"}
-              alt="章节化"
-            />
-          </div>
+       
         </div>
       ),
     },
     {
       title: (
         <h2>
-          章节<span className="text-gradient">生成</span>
+          <span className="text-gradient">AI生成</span>章节
         </h2>
       ),
       desc: (
-        <p className="text-gray-600 text-l">
+        <p className="text-gray-900 text-l">
           不喜欢AI一键生成的情节？
-          介子通过AI帮助你把精心设计的情节、角色转为章节大纲及正文，让你的灵感落地
+          芥子通过AI帮助你把精心设计的情节、角色转为章节大纲及正文，让你的灵感落地
         </p>
       ),
       img: (
         <div className=" relative z-20">
-          <div className="  ">
+          <div className="  p-2 ">
             <img
-              className=" w-2/5 mt-6 ml-48 rounded-lg shadow-xl ring-2 ring-zinc-800/5"
+              className=" "
               loading="lazy"
               decoding="async"
-              src={"img/chapter2.png"}
-              alt="章节化"
+              src={"img/chapterlize.png"}
+              alt="AI生成章节"
             />
           </div>
-          <div className=" relative object-none z-10">
-            <img
-              className="w-1/3 ml-6 rounded-lg shadow-xl ring-2 ring-zinc-800/5 -mt-12 "
-              loading="lazy"
-              decoding="async"
-              src={"img/chapter1.png"}
-              alt="章节化"
-            />
-          </div>
-          <div className=" object-none ">
-            <img
-              className=" w-2/5 -mt-44 mb-6 mr-16 ml-auto  rounded-lg shadow-xl ring-2 ring-zinc-800/5 "
-              loading="lazy"
-              decoding="async"
-              src={"img/chapter3.png"}
-              alt="章节化"
-            />
-          </div>
+      
         </div>
       ),
     },
     {
       title: (
         <h2>
-          风格化<span className="text-gradient">正文写作</span>
+          <span className="text-gradient">AI续写</span>正文
         </h2>
       ),
       desc: (
-        <p className="text-gray-600 text-l">
-          在介子中，你可以选择你喜欢的文字风格进行写作或续写，我们提供所有的基础需求，你可以直观地控制AI
+        <p className="text-gray-900 text-l">
+          在芥子中，你可以选择你喜欢的文字风格进行写作或续写，我们提供所有的基础需求，你可以直观地控制AI
         </p>
       ),
       img: (
         <div>
-          <div className="  ">
+          <div className=" p-2 ">
             <img
-              className=" mt-6 ml-auto -mr-6 rounded-lg -mb-6 shadow-xl ring-2 ring-zinc-800/5 "
+              className=" rounded-lg shadow-xl ring-2 ring-zinc-800/5 "
               src={"img/countwrite.png"}
-              alt="风格化续写"
+              alt="AI续写正文"
             />
           </div>
         </div>
@@ -552,41 +539,25 @@ const ToolKit = () => {
     },
 
     {
-      title: "对象创建",
+      title: (
+        <h2>
+          <span className="text-gradient">AI创建</span>对象
+        </h2>
+      ),
       desc: (
-        <p className="text-gray-600 text-l relative">
+        <p className="text-gray-900 text-l relative">
           任何时候你都可以使用AI创建角色、物品、世界观设定，AI将基于现有的所有内容为你提供灵感
         </p>
       ),
       img: (
         <div className=" ">
-          <div className=" ">
+          <div className=" p-2 ">
             <img
-              className=" w-1/3 ml-auto mr-10
-             rounded-lg shadow-xl ring-2 ring-zinc-800/5"
+              className=" "
               loading="lazy"
               decoding="async"
-              src={"img/ai_char.png"}
-              alt="章节化"
-            />
-          </div>
-
-          <div className="">
-            <img
-              className=" w-1/3 ml-40 -mt-72 rounded-lg shadow-xl ring-2 ring-zinc-800/5"
-              loading="lazy"
-              decoding="async"
-              src={"img/ai_conf.png"}
-              alt="章节化"
-            />
-          </div>
-          <div className="  ">
-            <img
-              className=" w-1/3 ml-16 -mt-72  rounded-lg shadow-xl ring-2 ring-zinc-800/5 "
-              loading="lazy"
-              decoding="async"
-              src={"img/ai_target.png"}
-              alt="章节化"
+              src={"img/create_target.png"}
+              alt="AI创建角色"
             />
           </div>
         </div>
@@ -605,24 +576,24 @@ const ToolKit = () => {
           </h2>
 
           <p>
-            介子的AI可以介入创作中的任何一个环节，无论是人物设定、情节构思、章节生成、章节大纲生成、风格化续写，介子可以为你任何阶段的灵感提供AI协助。
+            芥子的AI可以介入创作中的任何一个环节，无论是人物设定、情节构思、章节生成、章节大纲生成、风格化续写，芥子可以为你任何阶段的灵感提供AI协助。
           </p>
         </div>
-        <div id="toolkits" className=" relative ">
+        <div id="toolkits" className=" relative pt-6 sm:pd-0">
           <ul className="">
             {features.map((item, idx) => (
               <li
                 key={idx}
-                className=" container max-w-2xl lg:max-w-6xl grid lg:grid-cols-5 gap-8 lg:gap-16 my-6 sm:my-24 lg:my-32 items-center"
+                className="  max-w-2xl lg:max-w-6xl grid lg:grid-cols-5 gap-8 lg:gap-16 my-6 sm:my-16 lg:my-10 items-center"
               >
                 <div className="col-span-2  ">
-                  <h2 className=" font-semibold text-2l md:text-2xl [text-wrap:balance] tracking-tight">
+                  <h2 className=" font-semibold text-xl md:text-2xl  ">
                     {item.title}
                   </h2>
                   <p className="text-gray-600  mt-6">{item.desc}</p>
                 </div>
                 <div
-                  className="col-span-3  p-6 relative overflow-hidden  rounded-lg "
+                  className="col-span-3  md:p-6 relative overflow-hidden  rounded-lg "
                   style={{ backgroundColor: "#F0EEE5" }}
                 >
                   {item.img}
@@ -639,22 +610,22 @@ const ToolKit = () => {
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "用介子写作的作者",
+      name: "用芥子写作的作者",
       title: "AI辅助创作这一点非常 ",
       quote:
-        "我使用AI工具，但我并不信任AI一键生成的作品，AI始终只能是辅助作者进行创作，介子提供的方法在这一点上做得非常好。",
+        "我使用AI工具，但我并不信任AI一键生成的作品，AI始终只能是辅助作者进行创作，芥子提供的方法在这一点上做得非常好。",
     },
     {
       name: "一个很P的野生作者",
       title: "完美契合我编写世界观的需求",
       quote:
-        "介子提供的世界观的构建工具，包括剧情大纲、和人物、设定，可以直接参考进ai的上下文中，真的非常有用。",
+        "芥子提供的世界观的构建工具，包括剧情大纲、和人物、设定，可以直接参考进ai的上下文中，真的非常有用。",
     },
     {
       name: "阅读爱好者",
       title: "特别适合二创",
       quote:
-        "我没系统的写过小说，但是我也用用介子进行二创，一些无厘头的奇思妙想在这里很快就能写出来。",
+        "我没系统的写过小说，但是我也用用芥子进行二创，一些无厘头的奇思妙想在这里很快就能写出来。",
     },
   ];
 
