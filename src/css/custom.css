@@ -320,3 +320,34 @@ p {
 .hoverText:has(+ .hoverText + .hoverText:hover) {
   /*font-weight: 500;*/
 }
+
+
+h1 {
+  font-size: 2rem;
+  font-weight:900;
+  line-height: 3rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+h3{
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+
+h5 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.125rem;
+}
