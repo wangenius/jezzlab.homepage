@@ -47,7 +47,7 @@ const ProductionDownload = () => {
             一个专家为您的下一个想法创建，遵循最佳实践，删除障碍，按时交付。
           </p>
 
-          <div className="flex flex-col gap-4 md:flex-row justify-center my-10">
+          <div className="flex flex-col mx-8 md:mx-0 gap-6 md:flex-row justify-center my-10">
             <div
               onClick={() => {
                 window.open("http://120.77.220.248");

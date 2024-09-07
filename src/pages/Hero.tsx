@@ -59,7 +59,7 @@ const Hero = () => {
       <motion.div
         initial={{ y: 0, opacity: 0.5 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ ease: "easeInOut", duration: 0.75 }}
+        transition={{ ease: "easeInOut", duration: 0.5 }}
         className={
           "flex px-2 sm:px-6 flex-col  pt-32 pb-12 md:px-24 lg:px-28 justify-between items-center w-full h-[100vh]"
         }
@@ -79,12 +79,12 @@ const Hero = () => {
               "致力于为每一位创作者、艺术家或每一个团队提供更先进的创作环境。\n" +
               "从概念到表达，构建充满想象的世界，让创作变得轻而易举",
           ]}
-          typeSpeed={50}
+          typeSpeed={45}
         />
         <motion.div
           initial={{ y: 0, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ ease: "easeInOut", duration: 1 }}
+          transition={{ ease: "easeInOut", duration: 0.75 }}
           className="flex flex-col items-center"
         >
           <div className="flex gap-x-3 flex-row items-center text-sm">
@@ -92,7 +92,7 @@ const Hero = () => {
               onClick={() => {
                 window.open("http://120.77.220.248/login");
               }}
-              className="rounded-2xl border-2 border-dashed border-black bg-white px-6 py-3 font-semibold uppercase text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
+              className="rounded-lg border-2 border-dashed border-primary bg-primary-darker-1 text-white px-6 py-3 font-semibold uppercase transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
             >
               开始创作
             </button>
@@ -100,16 +100,18 @@ const Hero = () => {
               onClick={() => {
                 window.open(`${api}/docs/start`);
               }}
-              className={"px-5 py-3 hover:underline text-primary rounded-lg"}
+              className={
+                "px-5 py-3 hover:underline font-semibold text-primary rounded-lg"
+              }
             >
-              探索更多 →
+              探索更多
             </button>
           </div>
         </motion.div>
       </motion.div>
 
       <div
-        className="my-20 px-6 rounded-xl mx-2 md:mx-10 lg:mx-40 flex-col flex md:flex-row-reverse items-center justify-center"
+        className="my-20 px-6 rounded-xl mx-2 md:mx-10 lg:mx-24 flex-col flex md:flex-row-reverse items-center justify-center"
         style={{ backgroundColor: "#F0EEE5" }}
       >
         <div className="flex flex-none flex-wrap md:flex-nowrap flex-row text-5xl sm:text-5xl md:text-6xl lg:text-8xl xl:writing-mode-vertical-rl text-center font-thin text-gray-400">
@@ -134,7 +136,7 @@ const Hero = () => {
           transition={{ ease: "easeInOut", duration: 0.7 }}
           className="flex-1 justify-center flex h-full"
         >
-          <div className="flex py-5 md:py-20 gap-4 sm:gap-6 md:px-20">
+          <div className="flex py-5 md:py-12 gap-4 sm:gap-6 md:px-12">
             <TiltCard
               children={
                 <img

@@ -53,7 +53,7 @@ const Features = () => {
   ];
 
   return (
-    <div className="lg:px-32">
+    <div className="lg:px-32 ">
       <div id="features" className="">
         <div className="flex flex-col max-w-2xl mx-auto space-y-3 items-center text-center mb-10 ">
           <h2 className="text-gray-800 sm:text-5xl font-semibold text-4xl pb-3">
@@ -67,8 +67,8 @@ const Features = () => {
         </div>
         <div className="flex flex-col lg:flex-row p-3 items-center">
           <motion.div
-            initial={{ y: -50, opacity: 0, scale: 0.7 }}
-            whileInView={{ y: 0, opacity: 1, scale: 1 }}
+            initial={{ y: -120, opacity: 0, scale: 0.6 }}
+            whileInView={{ y: -20, opacity: 1, scale: 1 }}
             transition={{ ease: "easeInOut", duration: 0.75 }}
           >
             <div className="lg:basis-1/3">
