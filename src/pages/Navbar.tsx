@@ -30,7 +30,10 @@ const Navbar = () => {
     <div className={"lg:px-20 mt-2 absolute top-0 left-0 w-full z-40"}>
       <nav className="relative px-6 lg:px-10  py-4 flex justify-between items-center">
         <div className={"flex-1 flex gap-10 justify-between"}>
-          <img src={"img/icon.svg"} className={"w-12"} alt={""} />
+          <div className={"flex items-center gap-2"}>
+            <img src={"img/icon.svg"} className={"w-12"} alt={""} />
+            <span className={"text-xl font-bold"}>介子Jezz</span>
+          </div>
           <ul className="hidden items-center lg:flex lg:w-auto lg:space-x-6">
             {nav.map((item) => {
               return (

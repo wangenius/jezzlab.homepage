@@ -28,13 +28,13 @@ const CTA = () => {
       <div className="flex flex-col justify-center items-center h-full px-10 lg:px-0">
         <div className="pb-16 mt-12 max-w-2xl px-3 md:px-16 flex flex-col justify-center items-center mx-auto space-y-3 sm:text-center ">
           <h2 className="text-gray-800 sm:text-5xl font-semibold text-4xl pb-3">
-            <span className="text-gradient">芥子</span>：从创意到现实
+            <span className="text-gradient">介子</span>：从创意到现实
           </h2>
           <div className={"text-gray-600 text-lg"}>
-            <strong>芥子</strong>
+            <strong>介子</strong>
             用前沿的AI技术，为你预先解决了基础的文本生成需求，你可以迅速构建作品的独特
             <strong>宏大世界观</strong>
-            ，芥子帮你将创意转化为现实，使作品从核心创意到具体文本的过程如搭积木般简单明了。
+            ，介子帮你将创意转化为现实，使作品从核心创意到具体文本的过程如搭积木般简单明了。
           </div>
         </div>
         <div className="custom-screen  max-w-4xl pb-16 lx:pb-0 xl:max-w-[75%] mx-auto  text-gray-300 ">

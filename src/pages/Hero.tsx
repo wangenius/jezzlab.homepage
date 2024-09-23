@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import TiltCard from "@site/src/pages/TiltCard";
 import { ReactTyped } from "react-typed";
 import useDocusaurusContext from "@docusaurus/core/lib/client/exports/useDocusaurusContext";
+import { useState } from "react";
+import { PiPlayFill } from "react-icons/pi";
 
 const BubbleText = () => {
   return (
@@ -53,6 +55,7 @@ const BubbleText = () => {
 const Hero = () => {
   const { siteConfig } = useDocusaurusContext();
   const api = siteConfig.customFields.apiUrl;
+  const [video, setVideo] = useState(false);
 
   return (
     <div className="flex m-w-full min-h-full relative grow flex-col">
@@ -75,7 +78,7 @@ const Hero = () => {
           }}
           backSpeed={50}
           strings={[
-            "芥子是集成生成式AI技术打造的全新交互的内容创作平台。\n" +
+            "介子是集成生成式AI技术打造的全新交互的内容创作平台。\n" +
               "致力于为每一位创作者、艺术家或每一个团队提供更先进的创作环境。\n" +
               "从概念到表达，构建充满想象的世界，让创作变得轻而易举",
           ]}
@@ -90,7 +93,7 @@ const Hero = () => {
           <div className="flex gap-x-3 flex-row items-center text-sm">
             <button
               onClick={() => {
-                window.open("http://120.77.220.248/login");
+                window.open("https://jezzlab.com/");
               }}
               className="rounded-lg border-2 border-dashed border-primary bg-primary-darker-1 text-white px-6 py-3 font-semibold uppercase transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
             >
@@ -116,7 +119,7 @@ const Hero = () => {
       >
         <div className="flex flex-none flex-wrap md:flex-nowrap flex-row text-5xl sm:text-5xl md:text-6xl lg:text-8xl xl:writing-mode-vertical-rl text-center font-thin text-gray-400">
           <div className={"flex flex-row md:flex-col"}>
-            {"身如芥子，".split("").map((child, idx) => (
+            {"身如介子，".split("").map((child, idx) => (
               <span className={"hoverBlack"} key={idx}>
                 {child}
               </span>
@@ -130,25 +133,49 @@ const Hero = () => {
             ))}
           </div>
         </div>
-        <motion.div
-          initial={{ y: 200, opacity: 0.2 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ ease: "easeInOut", duration: 0.7 }}
-          className="flex-1 justify-center flex h-full"
-        >
-          <div className="flex py-5 md:py-12 gap-4 sm:gap-6 md:px-12">
-            <TiltCard
-              children={
-                <img
-                  src={"img/homepage copy.png"}
-                  alt="a home page"
-                  loading="eager"
-                  className="  rounded-lg shadow-xl  "
-                />
-              }
-            />
+        {video ? (
+          <div className="flex-1 justify-center flex h-full">
+            <video
+              className="flex py-5 md:py-12 gap-4 sm:gap-6 md:px-12"
+              controls
+              autoPlay
+            >
+              <source src="/des.mp4" type="video/mp4" />
+              您的浏览器不支持 HTML5 视频标签。
+            </video>
           </div>
-        </motion.div>
+        ) : (
+          <motion.div
+            initial={{ y: 200, opacity: 0.2 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ ease: "easeInOut", duration: 0.7 }}
+            className="flex-1 relative justify-center flex h-full "
+          >
+            <div
+              onClick={() => {
+                setVideo(true);
+              }}
+              className={
+                "absolute z-[1] top-[40%] cursor-pointer bg-background-darker-1 hover:bg-background-darker-2 p-6" +
+                " rounded-full"
+              }
+            >
+              <PiPlayFill className={"w-20 h-20"} />
+            </div>
+            <div className="flex py-5 md:py-12 gap-4 sm:gap-6 md:px-12">
+              <TiltCard
+                children={
+                  <img
+                    src={"img/homepage copy.png"}
+                    alt="a home page"
+                    loading="eager"
+                    className="  rounded-lg shadow-xl  "
+                  />
+                }
+              />
+            </div>
+          </motion.div>
+        )}
       </div>
     </div>
   );

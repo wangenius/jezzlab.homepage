@@ -41,7 +41,7 @@ const ProductionDownload = () => {
             <div className="max-w-2xl mx-auto text-center"></div>
           </div>
           <h2 className="text-gray-100 text-3xl font-semibold sm:text-4xl">
-            和芥子一起开始今天的工作
+            和介子一起开始今天的工作
           </h2>
           <p className="mt-3 text-gray-100">
             一个专家为您的下一个想法创建，遵循最佳实践，删除障碍，按时交付。
@@ -50,7 +50,7 @@ const ProductionDownload = () => {
           <div className="flex flex-col mx-8 md:mx-0 gap-6 md:flex-row justify-center my-10">
             <div
               onClick={() => {
-                window.open("http://120.77.220.248");
+                window.open("https://jezzlab.com");
               }}
               className="cursor-pointer w-auto flex items-center border rounded-lg px-4 py-2  mx-2"
             >

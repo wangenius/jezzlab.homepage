@@ -57,11 +57,11 @@ const Features = () => {
       <div id="features" className="">
         <div className="flex flex-col max-w-2xl mx-auto space-y-3 items-center text-center mb-10 ">
           <h2 className="text-gray-800 sm:text-5xl font-semibold text-4xl pb-3">
-            芥子空间
+            介子空间
           </h2>
 
           <div className="text-gray-600 text-lg">
-            <strong>芥子空间</strong>
+            <strong>介子空间</strong>
             是记录你所创造的世界观的地方，AI会始终遵循你所创建的规则。
           </div>
         </div>

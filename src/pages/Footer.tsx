@@ -9,6 +9,7 @@ import {
 import { CiMail } from "react-icons/ci";
 import { motion } from "framer-motion";
 import useDocusaurusContext from "@docusaurus/core/lib/client/exports/useDocusaurusContext";
+import { Popover } from "@site/src/pages/Pop";
 
 export const useNav = () => {
   const { siteConfig } = useDocusaurusContext();
@@ -49,12 +50,50 @@ const Footer = () => {
                 我们帮助所有创作者实现他们脑海中创作的快速落地
               </p>
               <div className="pt-2 flex items-center gap-x-6 text-gray-400">
-                <SiTiktok className="w-6 h-6 hover:text-gray-500 duration-150" />
-                <SiBilibili className="w-6 h-6 hover:text-gray-500 duration-150" />
-                <SiTencentqq className="w-6 h-6 hover:text-gray-500 duration-150" />
-                <SiWechat className="w-6 h-6 hover:text-gray-500 duration-150" />
-                <SiSinaweibo className="w-6 h-6 hover:text-gray-500 duration-150" />
-                <SiXiaohongshu className="w-6 h-6 hover:text-gray-500 duration-150" />
+                <Popover
+                  position={"top"}
+                  panel={<div className="text-sm">coming soon</div>}
+                >
+                  <SiTiktok className="w-6 h-6 hover:text-gray-500 duration-150" />
+                </Popover>
+                <Popover
+                  position={"top"}
+                  panel={
+                    <div className="text-sm">
+                      <img className={"w-60"} src="/img/bilibili.jpg" alt="" />
+                    </div>
+                  }
+                >
+                  <SiBilibili className="w-6 h-6 hover:text-gray-500 duration-150" />
+                </Popover>
+                <Popover
+                  position={"top"}
+                  panel={
+                    <div className="text-sm">
+                      <img className={"w-60"} src="/img/qq.png" alt="" />
+                    </div>
+                  }
+                >
+                  <SiTencentqq className="w-6 h-6 hover:text-gray-500 duration-150" />
+                </Popover>
+                <Popover
+                  position={"top"}
+                  panel={<div className="text-sm">更新中...</div>}
+                >
+                  <SiWechat className="w-6 h-6 hover:text-gray-500 duration-150" />
+                </Popover>
+                <Popover
+                  position={"top"}
+                  panel={<div className="text-sm">coming soon</div>}
+                >
+                  <SiSinaweibo className="w-6 h-6 hover:text-gray-500 duration-150" />
+                </Popover>
+                <Popover
+                  position={"top"}
+                  panel={<div className="text-sm">介子Jezz</div>}
+                >
+                  <SiXiaohongshu className="w-6 h-6 hover:text-gray-500 duration-150" />
+                </Popover>
               </div>
             </div>
           </motion.div>

@@ -58,7 +58,7 @@ const config: Config = {
     ],
     image: "img/icon.svg",
     navbar: {
-      title: "芥子文档",
+      title: "介子文档",
       logo: {
         alt: "My Site Logo",
         src: "img/icon.svg",
