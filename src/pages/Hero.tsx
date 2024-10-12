@@ -95,7 +95,7 @@ const Hero = () => {
               onClick={() => {
                 window.open("https://jezzlab.com/");
               }}
-              className="rounded-lg border-2 border-dashed border-primary bg-primary-darker-1 text-white px-6 py-3 font-semibold uppercase transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
+              className="rounded-lg text-base border-2 border-dashed border-primary bg-primary-darker-1 text-white px-6 py-3 font-semibold uppercase transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
             >
               开始创作
             </button>
@@ -104,7 +104,7 @@ const Hero = () => {
                 window.open(`${api}/docs/start`);
               }}
               className={
-                "px-5 py-3 hover:underline font-semibold text-primary rounded-lg"
+                "px-5 py-3 hover:underline text-base font-semibold text-primary rounded-lg"
               }
             >
               探索更多
@@ -155,8 +155,12 @@ const Hero = () => {
               onClick={() => {
                 setVideo(true);
               }}
+              style={{
+                top: "calc(50% - 40px)",
+              }}
               className={
-                "absolute z-[1] top-[40%] cursor-pointer bg-background-darker-1 hover:bg-background-darker-2 p-6" +
+                "absolute z-[1] cursor-pointer bg-background-darker-1" +
+                " hover:bg-background-darker-2 p-6" +
                 " rounded-full"
               }
             >

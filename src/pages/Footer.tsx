@@ -113,9 +113,12 @@ const Footer = () => {
               </li>
             ))}
           </ul>
-          <p className="mt-6 sm:mt-0">
-            © 2024 创生语宙 Inc. All rights reserved.
-          </p>
+          <div>
+            <p className="mt-6 text-sm sm:mt-0">
+              © 2024 创生语宙 Inc. All rights reserved.
+            </p>
+            <p className="mt-6 text-sm sm:mt-0">粤ICP备2024309407号 </p>
+          </div>
         </motion.div>
       </div>
     </footer>
