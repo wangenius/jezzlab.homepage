@@ -1,25 +1,177 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
+<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wangenius.github.io/blog</id>
-    <title>介子Jezz Blog</title>
-    <updated>2024-02-16T00:00:00.000Z</updated>
+    <title>WANGENIUS Blog</title>
+    <updated>2024-03-17T14:54:40.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wangenius.github.io/blog"/>
-    <subtitle>介子Jezz Blog</subtitle>
-    <icon>https://wangenius.github.io/img/icon.ico</icon>
+    <subtitle>WANGENIUS Blog</subtitle>
+    <icon>https://wangenius.github.io/img/panovista.svg</icon>
+    <entry>
+        <title type="html"><![CDATA[关于创业]]></title>
+        <id>https://wangenius.github.io/blog/关于创业</id>
+        <link href="https://wangenius.github.io/blog/关于创业"/>
+        <updated>2024-03-17T14:54:40.000Z</updated>
+        <summary type="html"><![CDATA[本文是对《精益创业实战》的一些学习笔记和整理。]]></summary>
+        <content type="html"><![CDATA[<div class="theme-admonition theme-admonition-success admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>notion</div><div class="admonitionContent_BuS1"><p>本文是对《精益创业实战》的一些学习笔记和整理。</p></div></div>
+<blockquote>
+<p>今天,投资人看重的不是知识产权,而是增长力。增长力不在于是否率先进入市场,而在于是否率先被市场广泛接受。具备增长力证明除了你自己、你的团队和你的亲朋好友之外,还有人关心你的创业想法,即客户。更重要的是,增长力也证明了你的商业模式行之有效。</p>
+</blockquote>
+<ol>
+<li>商业模式就是产品</li>
+<li>你应该爱上的是客户的问题，而非自己的解决方案</li>
+<li>创业的目标是获取增长力</li>
+</ol>
+<p>你可能会认为下面的这一点违反常理:不需要可行的产品,甚至不需要第一批付费客户,就可以发现值得解决的问题。</p>
+<p>拉里和史蒂夫不同,后者在着手创业一年后仍在完善和打磨他的产品,而拉里在不到8周的时间内就定义了自己的最小化可行产品(minimum viable product,MVP),而且获取客户的渠道在不断增加。</p>
+<p>本书概述了这一循序渐进的系统化过程，帮助你从最初的创业点子所点燃的火花开始，一路向前，直到最终实现产品与市场相契合。这个过程分为 3 个部分。</p>
+<!-- -->
+<ol>
+<li>
+<p>设计：关键在于需要具备正确的思维模式，即创业公司的真正产品并非你提供的解决方案，而是你的商业模式。谈到产品的时候，第一步永远都是设计。
+按照一定的流程，将自己最初的愿景（或最初计划）解构为一个商业模式。然后对自己的商业模式设计进行压力测试，避免那些最常见的让早期产品夭折的陷阱。最后，将你的想法清晰简洁地传达给他人，让他们明白你的想法，“见你所见”。</p>
+</li>
+<li>
+<p>验证：虽然从商业模式的蓝图入手是让创业思路更加清晰、焦点更加突出的关键，但重要的是，你要认识到所有的商业模式都是现实的抽象，而非现实本身。换句话说，必须用实证来验证而非仅靠空想或者信念。以 90 天为一个周期，分阶段反复测试自己的商业模式，并从第一个验证阶段入手，即问题与解决方案相匹配阶段。你将学会如何使用“演示–销售–构建”这一过程来测试客户对你产品的需求，并在无须先行开发产品的情况下获得付费客户。</p>
+</li>
+<li>
+<p>增长：实现问题与解决方案相匹配，可以让你做好一切准备，开发你已经知道客户会购买的产品，而非在开发产品之后寄希望于客户会购买。下一步就是发布自己的产品（最小化可行产品），然后不断迭代，最终实现产品与市场相契合。最大限度地提高你的产品推出速度和学习效果，同时持续关注各种假设中风险最高的假设。你将学习如何首先基于不同阶段小规模地测试你的商业模式，并在实现增长之前实现可重复性，而不是向所有人发布你的产品。</p>
+</li>
+</ol>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="设计">设计<a href="https://wangenius.github.io/blog/%E5%85%B3%E4%BA%8E%E5%88%9B%E4%B8%9A#%E8%AE%BE%E8%AE%A1" class="hash-link" aria-label="Direct link to 设计" title="Direct link to 设计">​</a></h2>
+<p>我们生活的时代为创新提供了无可比拟的机会。随着互联网、云计算和开源软件的出现，打造产品的成本已经降至历史最低点。然而，建立成功的创业公司的概率并没有提高多少，大多数新产品依旧会以失败收场。</p>
+<p>更有趣的事实是，在获得成功的创业公司中，有三分之二的公司表示它们的创业计划在中途发生了巨大变化。这些创业公司之所以能够成功，并不一定是因为它们有着优于其他创业公司的初始计划（或 A 计划），而是因为在资源耗尽之前它们找到了行之有效的方案。</p>
+<p>客户采用的曲线并非简单的一条曲线，因为每个客户群体采用解决方案的速度不同，所以客户采用的曲线是多条曲线组成的一系列曲线。在发布产品之前，你需要深刻理解到底谁是你的客户以及他们想要什么（或者将来想要什么）。很可能你会发现你的目标客户根本不需要你要推出的产品。自此，你需要不断迭代，才能满足客户需求，达到产品与市场相契合（product/market fit），这可能会与你最初规划的产品完全不同（需要“转型”）。</p>
+<p>理想中富有远见的产品推出都是完美命中目标，但是实际情况是，我们开始的起点要么在客户采用曲线的左边（太早），要么在右边（太迟），但是只要我们了解曲线的走向，并且在迭代机会（现金）耗尽之前让自己的产品进入正轨即可。</p>
+<p>要想把一个灵感的潜力全部挖掘出来，你必须要有激情和决心，但如果对这两点不加以限制，创业又会变成对信念的盲目追求。</p>
+<p>聪明的人总是对自己的想法非常自信，创业者更是如此。</p>
+<p>虽然对自己的愿景深信不疑可以创造良好的创业氛围，但是你应该努力摆脱信念的影响，更多地依靠事实说话。你必须接受一个事实，那就是创业之初的理念大部分是建立在未经测试的假设或者猜想之上，明白这一点非常重要。</p>
+<div class="theme-admonition theme-admonition-success admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>关于商业计划书</div><div class="admonitionContent_BuS1"><p>写作时间过长</p><p>为了让别人为你的创意亮起绿灯，你通常会被要求撰写一份长达 30 页的商业计划书，对未来 5 年的财务状况做出预测，然后创建为期 18 个月的产品路线图。这些工作至少会占用你几周的时间，多则几个月。</p><p>内容充其量只是最佳猜测</p><p>创业者和创新者之所以选择放弃重量级的商业计划书，并不是因为他们懒惰。相反，这是因为在任何新项目的初始阶段，许多假设的结果都是未知的。</p></div></div>
+<p><img decoding="async" loading="lazy" src="https://wangenius.github.io/assets/images/013-6d88e53dc5c50345f7004f0a5c20c571.jpg" width="1423" height="1042" class="img_ev3q"></p>
+<p>开展复杂项目就像建造一座房子，我们绝不会从砌墙入手。我们率先进行的工作肯定是制订建筑计划或者绘制相关蓝图——即便只是绘制草图。</p>
+<p>构思或者实施某个想法也不例外。</p>
+<p>创建精益画布草图的过程就像拼图一样，没有正确的起点，也没有特定的顺序，所以你可以从最了解的部分开始，以此为起点构建画布的其他部分。如果你还不确定该如何进行，可以按照下图中的顺序绘制。</p>
+<p><img decoding="async" loading="lazy" src="https://wangenius.github.io/assets/images/016-2c7a86b34c307659d417a54c2534f8b8.jpg" width="1423" height="1041" class="img_ev3q"></p>
+<p>如果你的商业模式中有多个行为者，那么必须找出哪些是真正的客户。</p>
+<p>由于持续创新框架在很大程度上关注的重心是客户，因此先填写精益画布中的“客户群体”（customer segment）这一栏是很自然的事情。</p>
+<p>为产品掏腰包的人才叫客户（customer），一般的用户（user）则不会这么做。对于搜索引擎来说，客户是广告商，而用户是使用搜索引擎进行搜索的人。</p>
+<p>你的目标是定义典型的早期采用者，而不是主流客户。</p>
+<p>你的客户群体应该覆盖商业创意所针对的总潜在市场（total addressable market，TAM），而你的早期采用者应该代表潜在市场的一个子集。这是你理想的初始客户群体（也被称为“理想客户画像”）。</p>]]></content>
+        <author>
+            <name>wangenius</name>
+            <uri>https://sebastienlorber.com</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最后的演讲]]></title>
+        <id>https://wangenius.github.io/blog/最后的演讲</id>
+        <link href="https://wangenius.github.io/blog/最后的演讲"/>
+        <updated>2024-02-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[——[Speech by Charlie (Charles) Chaplin (1889-1977) from The Great Dictator movie (1940)]]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>——[Speech by Charlie (Charles) Chaplin (1889-1977) from The Great Dictator movie (1940)]</p>
+</blockquote>
+<p>I'm sorry but i don't want to be an Emperor - that's not my business. I don't want to rule or conquer anyone. I should like to help everyone if possible, Jew, gentile, black man and white. We all want to help one another, human beings are like that.</p>
+<p>We want to live by each other's happiness, not by each other's misery. We don't want to hate and despise one another. In this world there is room for everyone and the good earth is rich and can provide for everyone. The way of life can be free and beautiful.</p>
+<p>But we have lost the way.</p>
+<p>Greed has poisoned men's souls - has barricaded the world with hate; has goose-stepped us into misery and bloodshed.</p>
+<p>We have developed speed but we have shut ourselves in: machinery that gives abundance has left us in want. Our knowledge has made us cynical, our cleverness hard and unkind. We think too much and feel too little: More than machinery we need humanity; More than cleverness we need kindness and gentleness. Without these qualities, life will be violent and all will be lost.</p>
+<p>The aeroplane and the radio have brought us closer togather. The very nature of these inventions cries out for the goodness.</p>
+<p>In men, cries out for universal brotherhood for the unity of us all. Even now my voice is reaching millions throughout the world, millions of despairing men, women and little children, victims of a system that makes men torture and imprison innocent people. To those who can hear me i say Do not despair. The misery that is now upon us is but the passing of greed, the bitterness of men who fear the way of human progress the hate of men will pass and dictators die, and the power they took from the people, will return to the people and so long as men die, liberty will never perish...</p>
+<p>Soldiers - don't give yourselves to brutes, men who despise you, enslave you - who regiment your lives, tell you what to do ,what to think and what to feel, whor drill you, diet you, treat you like cattle, use you as cannon fodder! Dont't give your selves to these unnatural men, machine men, with machine minds and machine hearts! You are not machines! You are not cattle! you are men! You have the love of humanity in your hearts. You don't hat - only the unloved hate - the unloved and the unatural. Soldiers - don't fight for slavery, fight for liberty! In the seventeenth chapter of Saint luke it is wrtten the kingdom of God is within man - not one man, nor a group of men - but in all men - in you! You the people have the power, the power to create machines, the power to create happiness! You the people have the power to make this life free and beautiful , to make this life a wonderful adventure! Then in the name of democracy let us use that power - let us all unite!!! Let us fight for a new world, a decent world that will give men a chance to work, that will give you the future and old age and security. By the promise of these things, brutes have risen to power, but they lie! The don not fulfil their promise, they never will! Dictators free themselves but they enslave the people! Now let us fight to fulfil that promise! Let us fight to free the world of reason, a world where science and progress will lead to all men's happiness.</p>
+<p>Soldiers - in the name of democracy, let us all unite!!!</p>]]></content>
+        <author>
+            <name>wangenius</name>
+            <uri>https://sebastienlorber.com</uri>
+        </author>
+        <category label="english" term="english"/>
+        <category label="speech" term="speech"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[摘录]]></title>
         <id>https://wangenius.github.io/blog/摘录</id>
         <link href="https://wangenius.github.io/blog/摘录"/>
         <updated>2024-02-16T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[charles dickens]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="charles-dickens">charles dickens<a href="https://wangenius.github.io/blog/%E6%91%98%E5%BD%95#charles-dickens" class="hash-link" aria-label="Direct link to charles dickens" title="Direct link to charles dickens">​</a></h2>
-<p>I wish you to know that you have been the last dream of my soul</p>
+        <summary type="html"><![CDATA[arthur schopenhauer]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="arthur-schopenhauer">arthur schopenhauer<a href="https://wangenius.github.io/blog/%E6%91%98%E5%BD%95#arthur-schopenhauer" class="hash-link" aria-label="Direct link to arthur schopenhauer" title="Direct link to arthur schopenhauer">​</a></h2>
+<ol>
+<li>wealth has little effect on promoting emotional pleasure, while health can paly a major role.</li>
+<li>the luckiest people in the world are undoubtedly those with rich and outstanding personalities, especially those with profound thoughts.</li>
+</ol>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="anonymity">anonymity<a href="https://wangenius.github.io/blog/%E6%91%98%E5%BD%95#anonymity" class="hash-link" aria-label="Direct link to anonymity" title="Direct link to anonymity">​</a></h2>
+<ol>
+<li>you are just here to experience life
+<br>you can't own anything
+<br>you can't keep anything
+<br>you don't need to prove anything
+<br>and there is nothing that must be achieved
+<br>what you can do is
+<br>to keep trying, harvesting, feeling
+<br>and letting go</li>
+<li>don't walk barefoot on this grass. My garden is littered with stars</li>
+<li>dare and the world always yields.</li>
+<li>the first step to becoming strong, is to kill all the fears in your heart.
+<br> Humans are only given an average of 70 years. all return to nothingness. There's nothing to be afraid of.
+<br> If you have a good idea just go for it.
+<br> The second step to being strong,is to develop the habit of deep thinking.
+<br> Don't just work hard. What really matters in achieving great things is wisdom.
+<br> it's the brain that counts, not just hard work.
+<br> The third step to becoming strong is not to obsess or be too serious.
+<br> In this world, many people cannot be simply divided into good or bad and many thins do not have a single standard answer.
+<br> If you obsess and get too serious, it will not only cause serious internal friction Has no positive effect on the matter itself.</li>
+</ol>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="heimerdinger">Heimerdinger<a href="https://wangenius.github.io/blog/%E6%91%98%E5%BD%95#heimerdinger" class="hash-link" aria-label="Direct link to Heimerdinger" title="Direct link to Heimerdinger">​</a></h2>
+<ol>
+<li>It's a sad truth that those who shine brightest often burn fastest.</li>
+</ol>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="charles-dickens">charles dickens<a href="https://wangenius.github.io/blog/%E6%91%98%E5%BD%95#charles-dickens" class="hash-link" aria-label="Direct link to charles dickens" title="Direct link to charles dickens">​</a></h2>
+<ol>
+<li>i wish you to know that you have been the last dream of my soul</li>
+</ol>
+<p>人皆有梦，但多寡不同。夜间做梦的人，日间醒来发现心灵尘灰深处所梦不过是虚华一场；但日间做梦的人则是危险人物，因为他们睁着眼行其所梦，甚至使之可能，而我就是如此。</p>
+<p>——托马斯 · 爱德华 · 劳伦斯在电影《阿拉伯的劳伦斯》中如是说</p>
 <p>Fairy tales are more than true: not because they tell us that dragons exist, but because they tell us that dragons can be beaten.
-—— Neil Gaiman, Coraline</p>]]></content>
+—— Neil Gaiman, Coraline</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="20220716">20220716<a href="https://wangenius.github.io/blog/%E6%91%98%E5%BD%95#20220716" class="hash-link" aria-label="Direct link to 20220716" title="Direct link to 20220716">​</a></h2>
+<p>今天开始记录一些生活，今天在家呆了一天，什么都没干，等到下午去取了维修好的电脑，花了1500.感觉给多了，但自己确实不善于砍价，给了1600.杭州的物价也是贵，午餐晚餐给的又少还巨贵，以前还觉得天津的也贵，没想到现在怀念起来天津的物价了。</p>
+<p>很多花销都是很碎但又不得不去开支，结果积攒下来数额惊人，实在难受。爸妈刚给了15000，租房花了10000，电脑花了1500，单位宿舍的押金又暂时少了1600，现在仅剩1500左右了，还有很多东西是用花呗和白条买的，坚持半个月希望可以等到发工资的那天。</p>
+<p>关于就业入职也很令人焦虑。薪资的事情一直无法尘埃落定，听说劳动合同中也不会明确给多少。但愿经过谈判可以让自己舒服一些。关于这半个月来体验到的工作感受，说实话，倒也没有想象中的大，而且由于不熟悉的原因，要是等到再和周边的人有深入交流和认识之后，可能更好。但问题是已经感觉到了工作的枯燥。非常之枯燥。那种在团队中没有任何话语权，负责人说什么就是什么的痛苦。省院的待遇也不是想象中的好。等等看吧。积攒一年后转码的动力。</p>
+<p>想学CS了。再稍微涉猎一点EE。</p>]]></content>
         <author>
             <name>wangenius</name>
+            <uri>https://sebastienlorber.com</uri>
         </author>
         <category label="collection" term="collection"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[词集]]></title>
+        <id>https://wangenius.github.io/blog/词集</id>
+        <link href="https://wangenius.github.io/blog/词集"/>
+        <updated>2024-02-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[不如见一面]]></summary>
+        <content type="html"><![CDATA[<audio src="./no.mp3" controls="" loop=""></audio>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="不如见一面">不如见一面<a href="https://wangenius.github.io/blog/%E8%AF%8D%E9%9B%86#%E4%B8%8D%E5%A6%82%E8%A7%81%E4%B8%80%E9%9D%A2" class="hash-link" aria-label="Direct link to 不如见一面" title="Direct link to 不如见一面">​</a></h2>
+<p>不如见一面，哪怕是一眼。这世间太多的难免亏欠，你是我穿过思念的箭</p>
+<strong> 都说靠时间遗忘的人，经不住见面再次寒暄。晚风轻轻的滴着挂牵，我就这心事不肯翻篇。</strong>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="耿耿于怀">耿耿于怀<a href="https://wangenius.github.io/blog/%E8%AF%8D%E9%9B%86#%E8%80%BF%E8%80%BF%E4%BA%8E%E6%80%80" class="hash-link" aria-label="Direct link to 耿耿于怀" title="Direct link to 耿耿于怀">​</a></h2>
+<p>难道没练习太耐，感觉都追不回来<br>
+<!-- -->试图再努力爱，也显得不自在<br>
+<!-- -->不懂得如何谈恋爱<br>
+<!-- -->还是我太爱你，对过去太放不开<br>
+<!-- -->难道是寂寞太耐，生锈的锁不难开<br>
+<!-- -->钥匙也折断了，留在旧患所在怀内<br>
+<!-- -->放满对你的爱<br>
+<!-- -->难怪跟谁也再没法恋爱</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="十面埋伏">十面埋伏<a href="https://wangenius.github.io/blog/%E8%AF%8D%E9%9B%86#%E5%8D%81%E9%9D%A2%E5%9F%8B%E4%BC%8F" class="hash-link" aria-label="Direct link to 十面埋伏" title="Direct link to 十面埋伏">​</a></h2>
+<p>轨迹改变角度交错<br>
+<!-- -->寂寞城市又再探戈<br>
+<!-- -->天空闪过灿烂花火<br>
+<!-- -->和你不再为爱奔波</p>]]></content>
+        <author>
+            <name>wangenius</name>
+            <uri>https://sebastienlorber.com</uri>
+        </author>
+        <category label="music" term="music"/>
+        <category label="黄伟文" term="黄伟文"/>
     </entry>
 </feed>

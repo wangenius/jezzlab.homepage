@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgc_docs=self.webpackChunkgc_docs||[]).push([[8947],{6600:e=>{e.exports=JSON.parse('{"authors":[{"name":"wangenius","title":"\u4ece\u67ef\u5e03\u897f\u8036\u5230\u8fea\u6770\u65af\u7279\u62c9\u7684\u7279\u89e3","imageURL":"https://github.com/wangenius.png","key":"wangenius","page":null,"count":1}]}')}}]);
