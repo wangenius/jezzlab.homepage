@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwangenius=self.webpackChunkwangenius||[]).push([[6315],{7261:e=>{e.exports=JSON.parse('{"label":"collection","permalink":"/blog/tags/collection","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);
