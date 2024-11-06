@@ -2,31 +2,52 @@ import { IoLogoChrome } from "react-icons/io";
 import { BiLogoWindows } from "react-icons/bi";
 import { SiMacos } from "react-icons/si";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
+interface Asset {
+  name: string;
+  browser_download_url: string;
+}
+
+interface Release {
+  assets: Asset[];
+}
 
 const ProductionDownload = () => {
-  const handleDownload = async () => {
-    try {
-      // 发起请求获取文件
-      const response = await fetch("/file/Jezz.exe"); // 文件在 public 目录中的相对路径
-      const blob = await response.blob();
-      const url = URL.createObjectURL(blob);
+  
+  const [latestRelease, setLatestRelease] = useState<Release | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
 
-      // 创建一个临时的 <a> 元素
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = "Jezz.exe"; // 设置下载的文件名
+  useEffect(() => {
+    const fetchLatestRelease = async () => {
+      try {
+        // 请求 GitHub API 获取最新版本的发布信息
+        const response = await fetch('https://api.github.com/repos/wangenius/jezzlab-releases/releases/latest');
+        const data: Release = await response.json();
+        setLatestRelease(data);
+        setLoading(false);
+      } catch (error) {
+        console.error('获取 Release 信息失败:', error);
+        setLoading(false);
+      }
+    };
 
-      // 触发点击事件
-      document.body.appendChild(link);
-      link.click();
+    fetchLatestRelease();
+  }, []);
 
-      // 清理临时的 <a> 元素
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
-    } catch (error) {
-      console.error("Failed to download file:", error);
+  const handleDownload = () => {
+    if (latestRelease) {
+      // 查找以 .exe 结尾的文件
+      const exeAsset = latestRelease.assets.find((asset) => asset.name.endsWith('.exe'));
+      if (exeAsset) {
+        // 重定向浏览器到 .exe 文件的下载链接，开始下载
+        window.location.href = exeAsset.browser_download_url;
+      } else {
+        alert('未找到 .exe 文件');
+      }
     }
   };
+  
   return (
     <motion.div
       whileInView={{ opacity: 1, y: 0 }}
