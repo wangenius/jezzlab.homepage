@@ -30,7 +30,7 @@ export const useNav = () => {
 const Footer = () => {
   const { nav } = useNav();
   return (
-    <footer className="pt-32 p-5 sm:pt-44 sm:px-0 lg:px-20">
+    <footer id="footer" className="pt-32 p-5 sm:pt-44 sm:px-0 lg:px-20">
       <div className="custom-screen text-gray-600">
         <div className="flex flex-wrap gap-y-10 items-center justify-between">
           <motion.div
@@ -50,7 +50,7 @@ const Footer = () => {
               </p>
               <div className="pt-2 flex items-center gap-x-6 text-gray-400">
                 <SiTiktok
-                  onClick={() => {}}
+                  onClick={() => { }}
                   className="w-6 h-6 hover:text-gray-500 duration-150 cursor-pointer"
                 />
 
@@ -78,7 +78,7 @@ const Footer = () => {
                 />
 
                 <SiSinaweibo
-                  onClick={() => {}}
+                  onClick={() => { }}
                   className="w-6 h-6 hover:text-gray-500 duration-150 cursor-pointer"
                 />
 

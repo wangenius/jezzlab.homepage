@@ -8,10 +8,9 @@ export const useNav = () => {
   const apiUrl = siteConfig.customFields.apiUrl;
 
   const navigation = [
-    { name: "特性", href: "#features" },
-    { name: "产品下载", href: "#production_download" },
-    { name: "文档", href: `${apiUrl}/docs/start` },
-    { name: "资源", href: `${apiUrl}/blog` },
+    { name: "教程文档", href: `${apiUrl}/docs/start` },
+    { name: "社群", href: `${apiUrl}/docs/community` },
+    { name: "加入我们", href: `${apiUrl}/docs/join` },
   ];
 
   return {
@@ -31,15 +30,15 @@ const Navbar = () => {
       <nav className="relative px-6 lg:px-10  py-4 flex justify-between items-center">
         <div className={"flex-1 flex gap-10 justify-between"}>
           <div className={"flex items-center gap-2"}>
-            <img src={"img/icon.svg"} className={"w-12"} alt={""} />
-            <span className={"text-xl font-bold"}>介子Jezz</span>
+            <img src={"img/icon.svg"} className={"w-9"} alt={""} />
+            <span className={"text-xl font-bold"}>介子创作</span>
           </div>
           <ul className="hidden items-center lg:flex lg:w-auto lg:space-x-6">
             {nav.map((item) => {
               return (
                 <li>
                   <a
-                    className="text-sm hover:no-underline text-gray-600 hover:text-primary"
+                    className="text-sm font-medium hover:underline text-gray-600 hover:text-primary"
                     href={item.href}
                   >
                     {item.name}
