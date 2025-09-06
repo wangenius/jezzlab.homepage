@@ -93,7 +93,7 @@ const Hero = () => {
           <div className="flex gap-x-3 flex-row items-center text-sm">
             <button
               onClick={() => {
-                window.open("https://jezzlab.com/");
+                window.open("https://app.jezzlab.com/");
               }}
               className="rounded-lg text-base border-2 border-dashed border-primary bg-primary-darker-1 text-white px-6 py-3 font-semibold uppercase transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
             >

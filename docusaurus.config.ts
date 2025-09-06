@@ -17,7 +17,7 @@ const config: Config = {
     // 其他配置项
     apiUrl:
       process.env.NODE_ENV === "production"
-        ? "https://www.jezzlab.com"
+        ? "https://jezzlab.com"
         : "http://localhost:4000",
   },
   presets: [

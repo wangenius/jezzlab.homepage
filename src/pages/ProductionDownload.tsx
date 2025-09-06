@@ -71,7 +71,7 @@ const ProductionDownload = () => {
           <div className="flex flex-col mx-8 md:mx-0 gap-6 md:flex-row justify-center my-10">
             <div
               onClick={() => {
-                window.open("https://jezzlab.com");
+                window.open("https://app.jezzlab.com");
               }}
               className="cursor-pointer w-auto flex items-center border rounded-lg px-4 py-2  mx-2"
             >
